@@ -8,16 +8,236 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-    <script src="js/application.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/application.js"></script>
+    <link href="custom.css" rel="stylesheet">
   </head>
   <body>
+    <section class="container">
+      <div class="row">
+        <div class="cart-title col-12 mb-4 mt-4">
+          <h1>
+          Shopping Cart
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section id="item-list" class="container">
+      <div class="row item">
+        <div class="item-name col-3 mb-4">
+          Salmon
+        </div>
+        <div class="item-price col-3">
+          $60.00
+        </div>
+        <div class="item-qty col-3">
+          <label>QTY</label>
+          <input class="quantity" type="number">
+        </div>
+        <div class="col-xs-1">
+          <button class="remove">
+            Remove
+          </button>
+        </div>
+        <div class="item-subtotal col-2 ml-3">
+        $--.--
+        </div>
+      </div>
+      <div class="row item">
+        <div class="item-name col-3 mb-4">
+          Tuna
+        </div>
+        <div class="item-price col-3">
+          $50.00
+        </div>
+        <div class="item-qty col-3">
+          <label>QTY</label>
+          <input class="quantity" type="number">
+        </div>
+        <div class="col-xs-1">
+          <button class="remove">
+            Remove
+          </button>
+        </div>
+        <div class="item-subtotal col-2 ml-3">
+        $--.--
+        </div>
+      </div>
+      <div class="row item">
+        <div class="item-name col-3 mb-4">
+          Carp
+        </div>
+        <div class="item-price col-3">
+          $40.00
+        </div>
+        <div class="item-qty col-3">
+          <label>QTY</label>
+          <input class="quantity" type="number">
+        </div>
+        <div class="col-xs-1">
+          <button class="remove">
+            Remove
+          </button>
+        </div>
+        <div class="item-subtotal col-2 ml-3">
+        $--.--
+        </div>
+      </div>
+      <div class="row item">
+        <div class="item-name col-3 mb-4">
+          Pork
+        </div>
+        <div class="item-price col-3">
+          $50.00
+        </div>
+        <div class="item-qty col-3">
+          <label>QTY</label>
+          <input class="quantity" type="number">
+        </div>
+        <div class="col-xs-1">
+          <button class="remove">
+            Remove
+          </button>
+        </div>
+        <div class="item-subtotal col-2 ml-3">
+        $--.--
+        </div>
+      </div>
+      <div class="row item">
+        <div class="item-name col-3 mb-4">
+          Beef
+        </div>
+        <div class="item-price col-3">
+          $40.00
+        </div>
+        <div class="item-qty col-3">
+          <label>QTY</label>
+          <input class="quantity" type="number">
+        </div>
+        <div class="col-xs-1">
+          <button class="remove">
+            Remove
+          </button>
+        </div>
+        <div class="item-subtotal col-2 ml-3">
+        $--.--
+        </div>
+      </div>
+      <div class="row item">
+        <div class="item-name col-3 mb-4">
+          Chicken
+        </div>
+        <div class="item-price col-3">
+          $25.00
+        </div>
+        <div class="item-qty col-3">
+          <label>QTY</label>
+          <input class="quantity" type="number">
+        </div>
+        <div class="col-xs-1">
+          <button class="remove">
+            Remove
+          </button>
+        </div>
+        <div class="item-subtotal col-2 ml-3">
+        $--.--
+        </div>
+      </div>
+      <div class="row item">
+        <div class="item-name col-3 mb-4">
+          Cereal
+        </div>
+        <div class="item-price col-3">
+          $45.00
+        </div>
+        <div class="item-qty col-3">
+          <label>QTY</label>
+          <input class="quantity" type="number">
+        </div>
+        <div class="col-xs-1">
+          <button class="remove">
+            Remove
+          </button>
+        </div>
+        <div class="item-subtotal col-2 ml-3">
+        $--.--
+        </div>
+      </div>
+      <div class="row item">
+        <div class="item-name col-3 mb-4">
+          Milk
+        </div>
+        <div class="item-price col-3">
+          $20.00
+        </div>
+        <div class="item-qty col-3">
+          <label>QTY</label>
+          <input class="quantity" type="number">
+        </div>
+        <div class="col-xs-1">
+          <button class="remove">
+            Remove
+          </button>
+        </div>
+        <div class="item-subtotal col-2 ml-3">
+        $--.--
+        </div>
+      </div>
+      <div class="row item">
+        <div class="item-name col-3 mb-4">
+          Sugar
+        </div>
+        <div class="item-price col-3">
+          $10.00
+        </div>
+        <div class="item-qty col-3">
+          <label>QTY</label>
+          <input class="quantity" type="number">
+        </div>
+        <div class="col-xs-1">
+          <button class="remove">
+            Remove
+          </button>
+        </div>
+        <div class="item-subtotal col-2 ml-3">
+        $--.--
+        </div>
+      </div>
+      <div class="row item new mt-4">
+        <div class="col-3 mb-4">
+          <input placeholder="apple" name="name">
+        </div>
+        <div class="col-3">
+          <input placeholder="30" name="cost">
+        </div>
+        <div class="col-1">
+          <button id="additem">
+            Add
+          </button>
+        </div>
 
+      </div>
+
+      <div class="row">
+        <div class="col-12 mt-4">
+          <h1 class="total-price-label">
+            Total Price:
+          </h1>
+          <div id="total-price">
+            $--.--
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
