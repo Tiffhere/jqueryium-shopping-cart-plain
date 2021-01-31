@@ -5,7 +5,8 @@ var updateSubtotal = function(ele){
   var subtotal = itemPrice * itemQty;
   $(ele).children('.item-subtotal').html(subtotal);
 
-  return subtotal;
+  // if subtotal is NaN, return 0
+  return subtotal || 0;
 
 }
 
@@ -14,7 +15,7 @@ var sum = function(acc, x) { return acc + x; };
 var updateTotal = function(){
   var updatedSum =[];
 
-  $(.item).each(function(i, ele){
+  $('.item').each(function(i, ele){
     var subtotal = updateSubtotal(ele);
     updatedSum.push(subtotal);
   });
@@ -28,22 +29,22 @@ $(document).ready(function(){
   updateTotal();
 
   $(document).on('click', '.remove', function(event){
-    $(this).closest(.row).remove();
+    $(this).closest('.row').remove();
     updateTotal();
   });
 
-$(#additem).on('submit', function(){
-  event.preventDefault();
-  var name = $(this).children('[name=name]').val();
-  var cost = $(this).children('[name=cost]').val();
+  $('#additem').on('click', function(event){
+    event.preventDefault();
+    var name = $(this).parent().parent().find('[name=name]').val();
+    var cost = $(this).parent().parent().find('[name=cost]').val();
 
-  $('#item-list').append('<div class="row item">' +
+    $('#item-list').append('<div class="row item">' +
     '<div class="item-name col-3 mb-4">' + name + '</div>' +
     '<div class="item-price col-3">' + cost + '</div>');
 
-   updateTotal();
-   $(this).children('[name=name]').val('');
-   $(this).children('[name=cost]').val('');
- });
+    updateTotal();
+    $(this).parent().parent().find('[name=name]').val('');
+    $(this).parent().parent().find('[name=cost]').val('');
+  });
 
 });
